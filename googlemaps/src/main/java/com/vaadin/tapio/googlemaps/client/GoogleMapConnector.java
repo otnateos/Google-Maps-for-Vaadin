@@ -216,9 +216,9 @@ public class GoogleMapConnector extends AbstractComponentConnector implements
         };
 
         if(getState().language != null) {
-            LoadApi.go(onLoad, loadLibraries, false, LoadApi.Language.fromValue(getState().language), "APIKEY="+getState().apiKey);
+            LoadApi.go(onLoad, loadLibraries, false, LoadApi.Language.fromValue(getState().language), "key="+getState().apiKey);
         } else {
-            LoadApi.go(onLoad, loadLibraries, false, "APIKEY="+getState().apiKey);
+            LoadApi.go(onLoad, loadLibraries, false, "key="+getState().apiKey);
         }
     }
 
